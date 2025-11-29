@@ -18,9 +18,6 @@ A modern voice assistant web application with a Python (Flask) backend using Goo
 - Google Gemini API key
 - Modern web browser (Chrome recommended for speech recognition)
 
-## Browser link
--link :http://127.0.0.1:3000/Voice_assistant/assistant_frontend.html
-
 ## Setup
 
 ### 1. Clone the repository
