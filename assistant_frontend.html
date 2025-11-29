@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant (Python Backend)</title>
+    <link rel="stylesheet" href="assistant_frontend.css">
+</head>
+<body>
+    <div class="va-main">
+        <h1 class="va-title">Voice Assistant</h1>
+        <div class="va-subtitle">Speak naturally, I'm listening</div>
+        <div class="va-blob-container">
+            <div class="va-blob"></div>
+        </div>
+        <div class="va-mic-row">
+            <button id="mic-btn" class="va-mic-btn"><span id="mic-icon">🎤</span></button>
+            <div class="va-mic-status" id="mic-status">Ready to listen</div>
+        </div>
+        <div class="va-chat-container">
+            <div id="chat-box"></div>
+            <div class="input-row">
+                <input type="text" id="user-input" placeholder="Type your message or use the mic...">
+            </div>
+        </div>
+    </div>
+    <script src="assistant_frontend.js"></script>
+</body>
+</html>
