@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ 
 # Voice Assistant Web App (Python + Gemini)
 
 A modern voice assistant web application with a Python (Flask) backend using Google Gemini AI for responses, and a stylish, animated frontend with voice input and text-to-speech.
@@ -17,6 +17,9 @@ A modern voice assistant web application with a Python (Flask) backend using Goo
 - Node.js (optional, for static server)
 - Google Gemini API key
 - Modern web browser (Chrome recommended for speech recognition)
+
+## Browser link
+-link :http://127.0.0.1:3000/Voice_assistant/assistant_frontend.html
 
 ## Setup
 
@@ -74,4 +77,4 @@ python backend.py
 MIT License
 =======
 # Voice_Asssistant-
->>>>>>> 89627ea06c03a23ef2d86130fb103f4481559ff1
+ 89627ea06c03a23ef2d86130fb103f4481559ff1
