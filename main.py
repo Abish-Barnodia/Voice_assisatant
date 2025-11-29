@@ -1,5 +1,5 @@
 
-# main.py
+
 import os
 import speech_recognition as sr
 import webbrowser
@@ -8,13 +8,13 @@ import pyjokes
 import pyttsx3
 import google.generativeai as genai
 
-# Set your Google API key directly (for demo; for production, use env variable)
+
 GOOGLE_API_KEY = "AIzaSyAPnNnqEOprY7Q21efBwJhOu_NpfNmKbog"
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("models/gemini-2.5-pro")
-# --- OpenRouter API call using requests ---
 
-# --- Google Gemini AI call ---
+
+
 def ask_gemini(prompt):
     try:
         response = model.generate_content(prompt)
@@ -25,7 +25,7 @@ def ask_gemini(prompt):
 
 
 
-# --- Speech helpers ---
+
 def sptext():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
@@ -44,7 +44,7 @@ def sptext():
 def speechtx(x):
     engine = pyttsx3.init()
     voices = engine.getProperty("voices")
-    # choose second voice if available, otherwise default
+   
     if len(voices) > 1:
         engine.setProperty('voice', voices[1].id)
     rate = engine.getProperty('rate')
@@ -52,7 +52,7 @@ def speechtx(x):
     engine.say(x)
     engine.runAndWait()
 
-# --- Main ---
+
 if __name__ == "__main__":
     while True:
         data = sptext()
