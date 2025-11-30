@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import os
+
 import pyttsx3
 import google.generativeai as genai
 
-# Configure Gemini
-GOOGLE_API_KEY = "AIzaSyAPnNnqEOprY7Q21efBwJhOu_NpfNmKbog"
+# Directly set Gemini API key (user request)
+GOOGLE_API_KEY = "AIzaSyCLjX4ohuSQcwP5vo2hdK-gXu8xleUABWU"
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("models/gemini-2.5-pro")
 
@@ -20,7 +20,10 @@ def chat():
         return jsonify({'reply': "I didn't get your message."})
     # Special commands
     if "stop the program" in user_message.lower():
-        return jsonify({'reply': "Stopping now."})
+        shutdown = request.environ.get('werkzeug.server.shutdown')
+        if shutdown is not None:
+            shutdown()
+        return jsonify({'reply': "Stopping now and shutting down the server."})
     if "exit" in user_message.lower() or "quit" in user_message.lower():
         return jsonify({'reply': "Goodbye!"})
     if "your name" in user_message.lower():
